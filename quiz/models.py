@@ -557,14 +557,12 @@ class Question(models.Model):
                                null=True,
                                verbose_name=_("Figure"))
 
-    content = models.CharField(max_length=1000,
-                               blank=False,
+    content = models.TextField(blank=False,
                                help_text=_("Enter the question text that "
                                            "you want displayed"),
                                verbose_name=_('Question'))
 
-    explanation = models.TextField(max_length=2000,
-                                   blank=True,
+    explanation = models.TextField(blank=True,
                                    help_text=_("Explanation to be shown "
                                                "after the question has "
                                                "been answered."),
